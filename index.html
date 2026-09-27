@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- スマホ幅での横揺れ・はみ出しを防ぐ基本設定 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>緑丘学園 トップページ</title>
+  <!-- Tailwind CSSを読み込む（VS Codeですぐ確認するためCDNを利用） -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<!-- overflow-x-hidden で念のため横スクロールを完全に防ぐ -->
+<body class="bg-gray-100 text-gray-800 overflow-x-hidden">
+
+  <!-- ヘッダー -->
+  <header class="bg-green-700 text-white p-4">
+    <!-- 要件：スマホで縦並び(flex-col)、PCで横並び(md:flex-row) -->
+    <div class="flex flex-col md:flex-row justify-between items-center max-w-5xl mx-auto">
+      <h1 class="text-2xl font-bold mb-4 md:mb-0">緑丘学園</h1>
+      <nav>
+        <ul class="flex flex-col md:flex-row gap-3 md:gap-6 text-center">
+          <li><a href="#" class="hover:underline">学校紹介</a></li>
+          <li><a href="#" class="hover:underline">学部・学科</a></li>
+          <li><a href="#" class="hover:underline">アクセス</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- メインビジュアル（指定写真1） -->
+  <div class="w-full">
+    <img src="学習院大学２.webp" alt="キャンパス風景" class="w-full h-64 object-cover">
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="p-6 max-w-5xl mx-auto mt-4">
+    <h2 class="text-xl font-bold text-center mb-8 border-b-2 border-green-700 inline-block">お知らせ・トピックス</h2>
+
+    <!-- カードエリア -->
+    <!-- 要件：スマホで1列(grid-cols-1)、PCで3列(md:grid-cols-3) -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- カード1（指定写真2） -->
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img src="学習院１.jpg" alt="歴史ある校舎" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-bold mb-2">オープンキャンパス開催</h3>
+          <p class="text-sm text-gray-600">夏のオープンキャンパスの予約を開始しました。ぜひご来場ください。</p>
+        </div>
+      </div>
+
+      <!-- カード2（指定写真1） -->
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img src="学習院大学２.webp" alt="新しい校舎" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-bold mb-2">新校舎の完成</h3>
+          <p class="text-sm text-gray-600">学生が快適に学べる最新設備の整った新棟が完成しました。</p>
+        </div>
+      </div>
+
+      <!-- カード3（指定写真2） -->
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img src="学習院１.jpg" alt="木漏れ日と校舎" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-bold mb-2">秋の文化祭について</h3>
+          <p class="text-sm text-gray-600">今年の文化祭は10月に開催予定です。地域の方も参加可能です。</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- フッター（要件） -->
+  <footer class="bg-gray-800 text-white text-center p-6 mt-12">
+    <p class="text-sm">&copy; 2026 緑丘学園 All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
